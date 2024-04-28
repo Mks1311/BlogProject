@@ -1,3 +1,4 @@
+import { get } from "react-hook-form";
 import config from "../config/config.js";
 
 import { Client,Account,ID } from "appwrite";
@@ -21,7 +22,7 @@ export class AuthService{
             }
             return userAccount;
         }catch(error){
-            throw error;
+            console.log("Error :: Appwrite Service :: createAccount",error);
         }
     }
 
@@ -30,7 +31,24 @@ export class AuthService{
             await this.account.createEmailPasswordSession(email,password);
         }
         catch(error){
-            throw error;
+            console.log("Error :: Appwrite Service :: LogIn",error);
+        }
+    }
+
+    async getCurrentUser(){
+        try {
+            return await this.account.get();
+        } catch (error) {
+            console.log("Error :: Appwrite Service :: getCurrentUser",error);
+        }
+        return null;
+    }
+
+    async LogOut(){
+        try {
+            await this.account.deleteSessions();
+        } catch (error) {
+            console.log("Error :: Appwrite Service :: LogOut",error);
         }
     }
 
