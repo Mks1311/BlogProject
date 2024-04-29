@@ -8,6 +8,8 @@ import Input from "./Input";
 import Login from "./Login";
 import PostCard from "./Postcard";
 import Select from "./Select";
+import Login from "./Login";
+import Signup from "./Signup"
 export {
     Header,
     Footer,
@@ -18,5 +20,7 @@ export {
     Input,
     Login,
     PostCard,
-    Select
+    Select,
+    Login,
+    Signup
 }
