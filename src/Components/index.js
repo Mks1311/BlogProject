@@ -8,7 +8,6 @@ import Input from "./Input";
 import Login from "./Login";
 import PostCard from "./Postcard";
 import Select from "./Select";
-import Login from "./Login";
 import Signup from "./Signup"
 import RTE from "./RTE";
 import AuthLayout from "./AuthLayout"
@@ -24,7 +23,6 @@ export {
     Login,
     PostCard,
     Select,
-    Login,
     Signup,
     RTE,
     AuthLayout,
